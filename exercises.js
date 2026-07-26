@@ -51,7 +51,7 @@ function exercise_02() {
 
   let myAge = 20;
   let myName = "Omer";
-  console.log("Hello my name is " + [myName] + " and I am " + [myAge] + " years old");
+  console.log("Hello my name is",myName, "and I am " ,myAge, "years old");
 
 
   // CODE IN THE OPEN LINES ABOVE
@@ -84,10 +84,10 @@ function exercise_03() {
   let multiply = num1 * num2;
   let divide = num1 / num2;
 
-  console.log(num1 + " + " + num2 + " = " + sum)
-  console.log(num1 + " - " + num2 + " = " + subtract)
-  console.log(num1 + " * " + num2 + " = " + multiply)
-  console.log(num1 + " / " + num2 + " = " + divide)
+  console.log(num1, " + ", num2 + " = ", sum)
+  console.log(num1, " - ", num2 + " = ", subtract)
+  console.log(num1, " * ", num2 + " = ", multiply)
+  console.log(num1, " / ", num2 + " = ", divide)
   // CODE IN THE OPEN LINES ABOVE
 }
 
@@ -107,11 +107,11 @@ function exercise_04() {
 
   let x;
   x = 1;
-  console.log("The value of x is " + typeof x);
+  console.log("The value of x is ", typeof x);
   x = "Hello World";
-  console.log("The value of x is " + typeof x);
+  console.log("The value of x is ", typeof x);
   x = true;
-  console.log("The value of x is " + typeof x);
+  console.log("The value of x is ", typeof x);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -193,7 +193,7 @@ function exercise_07() {
 
   let name = "Omer";
   let greeting;
-  greeting = "Hello, " + [name] + "! Welcome to JavaScript!"
+  greeting = `Hello, " + ${name} + "! Welcome to JavaScript!`
   console.log(greeting);
 
   // CODE IN THE OPEN LINES ABOVE
@@ -271,7 +271,7 @@ function exercise_10() {
     }
 
     console.log(book.title);
-    console.log(book.author);
+    console.log(book['author']);
   // CODE IN THE OPEN LINES ABOVE
 }
 
@@ -296,10 +296,11 @@ function exercise_11() {
       title: "One Piece etc",
       author: "Eiichiro Oda",
       publishedYear: 1997,
-      genre: "Action-Adventure, Fantasy, and Comedy"
+      
     }
 
     book.publishedYear = 2026;
+    book.genre = "Action-Adventure, Fantasy, and Comedy";
     console.log(book);
 
   // CODE IN THE OPEN LINES ABOVE
@@ -324,8 +325,11 @@ function exercise_12() {
     author: "Eiichiro Oda",
     publishedYear: 1997
   }
+
+  console.log(book);
   delete book.author;
   console.log(book);
+
   // CODE IN THE OPEN LINES ABOVE
 }
 
@@ -355,9 +359,9 @@ function exercise_13() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  console.log(original);
+  console.log(original.name);
   copy.name = "Bob"
-  console.log(original);
+  console.log(original.name);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -402,13 +406,9 @@ function exercise_15() {
 
   const currentDate = new Date();
 
-  const year = currentDate.getFullYear();
-  const month = currentDate.getMonth() + 1;
-  const day = currentDate.getDay();
-
-  console.log("Year: " + year);
-  console.log("Month: " + month);
-  console.log("Day: " + day);
+  console.log("Year: " + currentDate.getFullYear());
+  console.log("Month: " + currentDate.getMonth() + 1);
+  console.log("Day: " + currentDate.getDay());
 
 
   // CODE IN THE OPEN LINES ABOVE
@@ -502,9 +502,9 @@ function exercise_18() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  console.log(msgPart1 +" "+ msgPart2)
+  console.log("With the plus operator: " + msgPart1 +" "+ msgPart2)
   console.log(msgPart1, msgPart2)
-  console.log(`${msgPart1} ${msgPart2}`)
+  console.log(`And withe template literal: ${msgPart1} ${msgPart2}`)
   
 
   // CODE IN THE OPEN LINES ABOVE
